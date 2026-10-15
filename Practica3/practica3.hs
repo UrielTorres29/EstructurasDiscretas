@@ -1,3 +1,5 @@
+import Auxiliar_Modulo
+
 {-
     Tipo de dato: Plazo
     Descripción: Representa el plazo de una inversión en días o meses.
@@ -33,3 +35,39 @@ mensajeCetes dinero (Dias n) = putStrLn ("Despues de " ++ show n ++ " dias , obt
     where montoFinal = cetes dinero (Dias n)
 mensajeCetes dinero (Meses n) = putStrLn ("Despues de " ++ show n ++ " meses , obtuve " ++ show (montoFinal - dinero) ++ " de rendimiento bruto sin asumir ningun riesgo crediticio. El monto total de mi inversion es de " ++ show montoFinal)
     where montoFinal = cetes dinero (Meses n)
+
+{- 
+    Función: negativos
+    Descripción: Cuenta los números negativos de una lista
+    Uso: negativos [1, -5, 6, 7, -9, -10, -2] = 4
+-}
+
+negativos :: [Int] -> Int
+negativos lista = length [n | n <- lista, n < 0]
+
+{- 
+    Función: soloPares
+    Descripción: Recibe una lista y devuelve otra con los números pares de la lista original, usando la función esParBit.
+    Uso: soloPares [1, 10, -6, 5, 0, -2] = [10,-6,0,-2]
+-}
+
+soloPares :: [Int] -> [Int]
+soloPares lista = [n | n <- lista, esParBit n]
+
+{- 
+    Función: primos
+    Descripción: Recibe una lista y devuelve otra con los números primos de la lista original, usando la función numPrimo 
+    Uso: primos [2, 4, 5, 8, 9, 11] = [2,5,11]
+-}
+
+primos :: [Int] -> [Int]
+primos lista = [n | n <- lista, numPrimo n]
+
+{- 
+    Función: coprimos
+    Descripción: Recibe un entero y devuelve una lista de los coprimos menores a ese entero. 
+    Uso: coprimos coprimos 15 = [1,2,4,7,8,11,13,14]
+-}
+
+coprimos :: Int -> [Int]
+coprimos n = [c | c <- [1..n-1], length [d | d <- [2..c], mod n d == 0, mod c d == 0] == 0]
