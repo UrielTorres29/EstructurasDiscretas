@@ -25,8 +25,7 @@ cetes _ _ = error "Plazo no valido"
 
 {- 
     Función: mensajeCetes
-    Descripción: Devuelve un mensaje que indica el plazo de una inversión, el rendimiento bruto obtenido y el monto acumulado al finalizar el plazo. 
-    Recibe el monto inicial y el plazo
+    Descripción: Devuelve un mensaje que indica el plazo de una inversión, el rendimiento bruto obtenido y el monto acumulado al finalizar el plazo. Recibe el monto inicial y el plazo
     Uso: mensajeCetes 200 (Meses 1) = Despues de 1 meses , obtuve 0.9473333333333187 de rendimiento bruto sin asumir ningun riesgo crediticio. El monto total de mi inversion es de 200.94733333333332
 -}
 
@@ -65,7 +64,7 @@ primos lista = [n | n <- lista, numPrimo n]
 
 {- 
     Función: coprimos
-    Descripción: Recibe un entero y devuelve una lista de los coprimos menores a ese entero. 
+    Descripción: Recibe un entero y devuelve una lista de los coprimos de ese entero.
     Uso: coprimos coprimos 15 = [1,2,4,7,8,11,13,14]
 -}
 

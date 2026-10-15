@@ -8,10 +8,11 @@ Reconocer la diferencia entre una *clase de tipo* y un *tipo de dato concreto*. 
 ---
 ## Tiempo requerido
 
-El tiempo requerido para realizar esta práctica fue de aproximadamente _ horas
+El tiempo requerido para realizar esta práctica fue de aproximadamente 2 horas
 
----
-## Ejercicio favorito
+### Ejercicio favorito
+
+Funcion **primos**
 
 ---
 ## Diferencia entre *Num* e *Int*
@@ -39,6 +40,15 @@ En el archivo ***practica3.hs*** se implementaron las siguientes funciones:
 
 - cetes: Calcula el monto final de una inversión en cetes
 - mensajeCetes: Devuelve un mensaje que indica el plazo de una inversión, el rendimiento bruto obtenido y el monto final
+- negativos: Cuenta los números negativos de una lista
+- soloPares: Recibe una lista y devuelve otra con los números pares de la lista original
+- primos: Recibe una lista y devuelve otra con los números primos de la lista original
+- coprimos: Recibe un entero y devuelve una lista de los coprimos de ese entero.
+
+En el modulo ***Auxiliar_Modulo.hs*** se implementaron las siguientes funciones:
+
+- esParBit: Verifica si un entero es par de acuerdo a sus operaciones entre bits
+- numPrimo: Verifica si un número es primo 
 
 Todas las funciones estan comentadas dentro del mismo archivo
 
@@ -62,8 +72,11 @@ Después se pueden ejecutar las funciones desde el prompt de GHCi, por ejemplo:
 ```javascript
 ghci> cetes 200 (Dias 182) 
 206.98677777777777
+
+ghci> coprimos 15
+[1,2,4,7,8,11,13,14]
 ```
 ---
 ## Comentarios 
 
-La pŕactica aun sigue en desarrolo, por lo que se agregaran mas elementos.
+La función ***primos*** utiliza otra función (***numPrimo***) importada desde el mismo modulo en el que se encuentra la función ***esParBit***.
