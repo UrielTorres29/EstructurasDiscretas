@@ -12,7 +12,7 @@ esParBit n = (n.&.1) == 0
 
 {- 
     Función: numPrimo
-    Descripción: Verifica si un número es primo o no
+    Descripción: Verifica si un número es primo
     Uso: numPrimo 7 = True
 -}
 
