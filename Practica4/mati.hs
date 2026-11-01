@@ -1,0 +1,1 @@
+data Matrioska = Mati | Cont Matrioska deriving (Eq, Show)

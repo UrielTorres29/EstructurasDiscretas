@@ -1,0 +1,1 @@
+data Entero = Zero | Succ Entero | Neg Entero deriving (Eq, Show)
